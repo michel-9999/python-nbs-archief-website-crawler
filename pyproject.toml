@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nbs-archive-crawler"
+version = "1.0.0"
+description = "Turn a public Joomla website into a portable static archive."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = [
+    "beautifulsoup4>=4.12,<5",
+    "requests>=2.32,<3",
+    "tinycss2>=1.4,<2",
+]
+
+[project.scripts]
+nbs-archive = "archive_crawler:main"
+
+[tool.setuptools]
+py-modules = ["archive_crawler"]
